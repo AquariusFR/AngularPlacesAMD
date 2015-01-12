@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="column_full">
+        <h1 class="column__entete">S'inscrire</h1>
+        <ng-form name="inscriptionForm">
+            <fieldset id="fieldset_inscrire" class="column__form">
+                <h3>Mes informations recruteur</h3>
+                <div class="form__row">
+                    <div class="column_quarter"></div>
+                    <div class="column_half form__input_group" for="email">
+                        <input type="text" name="email" pattern="\S+@\S+\.\S+" placeholder="Veuillez saisir l'adresse e-mail de votre compte recruteur" class="form__text" required="true"
+                               ng-model="user.mail"
+                               ng-model-options="{ debounce: debounceFactor }" />
+                        <span class="form__text_highlight"></span>
+                        <span class="form__text_bar"></span>
+                        <label class="form__text_label"
+                               ng-class="{form__text_label_focus:user.mail!=''}">E-mail</label>
+                        <label class="form__text_required"
+                               ng-show="isValueEmpty(user.mail)">* E-mail obligatoire</label>
+                        <label class="form__text_invalid"
+                               ng-cloak
+                               ng-show="isInputInvalid(user.mail, inscriptionForm.email)">&#x2718;E-mail invalide</label>
+                        <label
+                               ng-cloak class="form__text_valid"
+                               ng-show="isInputValid(user.mail, inscriptionForm.email)">&#x2713;E-mail valide</label>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <div class="column_quarter"></div>
+                    <div class="column_half form__input_group">
+                        <input ng-model="user.name" type="text" name="nom" class="form__text" required="true" placeholder="Veuillez saisir votre nom" />
+                        <span class="form__text_highlight"></span>
+                        <span class="form__text_bar"></span>
+                        <label class="form__text_label">Nom</label>
+                        <label class="form__text_required" ng-show="!inscriptionForm.nom.$valid">* Nom obligatoire</label>
+                        <label ng-cloak class="form__text_valid" ng-show="inscriptionForm.nom.$valid">&#x2713;</label>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <div class="column_quarter"></div>
+                    <div class="column_half form__input_group">
+                        <input ng-model="user.firstname" type="text" name="prenom" class="form__text" required="true" placeholder="Veuillez saisir votre prénom" />
+                        <span class="form__text_highlight"></span>
+                        <span class="form__text_bar"></span>
+                        <label class="form__text_label">Prénom</label>
+                        <label class="form__text_required" ng-show="!inscriptionForm.prenom.$valid">* Prénom obligatoire</label>
+                        <label ng-cloak class="form__text_valid" ng-show="inscriptionForm.prenom.$valid">&#x2713;</label>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <div class="column_quarter"></div>
+                    <div class="column_half form__input_group">
+                        <input ng-model="user.password.main" type="password" name="passwordMain" class="form__text" required="true" placeholder="Veuillez saisir votre mot de passe" pattern=".{5,}" />
+                        <span class="form__text_highlight"></span>
+                        <span class="form__text_bar"></span>
+                        <label class="form__text_label" ng-class="{form__text_label_focus:user.password.main!=''}">Mot de passe</label>
+                        <label class="form__text_required" ng-show="isValueEmpty(user.password.main)">* Mot de passe obligatoire</label>
+                        <label class="form__text_invalid"
+                               ng-cloak
+                               ng-show="isInputInvalid(user.password.main, inscriptionForm.passwordMain)">&#x2718;Mot de passe invalide</label>
+                        <label class="form__text_valid"
+                               ng-cloak
+                               ng-show="isInputValid(user.password.main, inscriptionForm.passwordMain)">&#x2713;Mot de passe valide</label>
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <div class="column_quarter"></div>
+                    <div class="column_half form__input_group">
+                        <input type="password" name="passwordConfirm" class="form__text" required="true" placeholder="Veuillez confirmer votre mot de passe" pattern=".{5,}"
+                               ng-model="user.password.confirm"  />
+                        <span class="form__text_highlight"></span>
+                        <span class="form__text_bar"></span>
+                        <label class="form__text_label"
+                               ng-class="{form__text_label_focus:user.password.confirm!=''}">Confirmation du mot de passe</label>
+                        <label class="form__text_required"
+                               ng-show="isValueEmpty(user.password.confirm)">* Veuillez confirmer le mot de passe</label>
+                        <label class="form__text_invalid"
+                               ng-cloak
+                               ng-show="isInputInvalid(user.password.confirm, inscriptionForm.passwordConfirm)">&#x2718;Mot de passe invalide</label>
+                        <label class="form__text_invalid"
+                               ng-cloak
+                               ng-show="isPasswordNotConfirmed()">&#x2718;Echec de la confirmation</label>
+                        <label class="form__text_valid"
+                               ng-cloak
+                               ng-show="isPasswordConfirmed()">&#x2713;Confirmation réussie</label>
+                    </div>
+                </div>
+
+                <div class="form__row_button">
+                    <div class="column_full_center">
+                        <button type="button" ng-click="inscription()" class="form__button ng-hide"
+                                ng-show="inscriptionForm.$valid && isPasswordConfirmed()"
+                                ng-disabled="!inscriptionForm.$valid || !isPasswordConfirmed() || validated || loading"
+                                ng-class="{form__button_primary_validated:validated, form__button_loading:loading}">
+                            <span ng-show="!validated && !loading">S'inscrire</span>
+                            <span ng-cloak ng-show="validated">Inscrit !</span>
+                            <span ng-cloak ng-show="loading" class="form__button_loading_label">En cours ...</span>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </ng-form>
+    </div>
+</div>
