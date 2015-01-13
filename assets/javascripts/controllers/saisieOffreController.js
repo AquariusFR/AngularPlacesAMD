@@ -7,7 +7,6 @@ define([],
             $scope.loading = false;
             $scope.error = false;
             $scope.jobOffer = {
-                titre: 'test',
                 localisations: []
             };
             $scope.angularLoaded = true;
