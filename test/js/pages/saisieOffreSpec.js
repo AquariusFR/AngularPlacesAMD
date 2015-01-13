@@ -174,12 +174,10 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(true);
                 expect(form.$valid).to.equal(true);
                 expect(tagElementList.length).to.equal(1);
@@ -191,7 +189,6 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
@@ -199,7 +196,6 @@ define(
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(true);
                 expect(form.$valid).to.equal(true);
                 expect(tagElementList.length).to.equal(1);
@@ -209,13 +205,11 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
                 fakedPlacesApi.fakePlaceChoosen(another_place_ok);
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(true);
                 expect(form.$valid).to.equal(true);
                 expect(tagElementList.length).to.equal(2);
@@ -226,12 +220,10 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakePlaceChoosen(null);
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(false);
                 expect(form.$valid).to.equal(false);
                 expect(tagElementList.length).to.equal(0);
@@ -240,12 +232,10 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakeError();
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(false);
                 expect(form.$valid).to.equal(false);
                 expect(tagElementList.length).to.equal(0);
@@ -254,13 +244,11 @@ define(
 
                 var tagElementList;
 
-                form.titre.$setViewValue('title');
                 fakedPlacesApi.fakeError();
                 fakedPlacesApi.fakePlaceChoosen(place_ok);
 
                 tagElementList = tagUlElement.find("li").find("span");
 
-                expect(form.titre.$valid).to.equal(true);
                 expect(form.localisations.$valid).to.equal(true);
                 expect(form.$valid).to.equal(true);
                 expect(tagElementList.length).to.equal(1);

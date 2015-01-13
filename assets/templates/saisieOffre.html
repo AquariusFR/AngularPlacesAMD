@@ -5,20 +5,6 @@
             <fieldset class="column__form">
                 <div class="form__row">
                     <div class="column_quarter"></div>
-                    <div class="column_half form__input_group" for="titre">
-                        <input type="text" name="titre" class="form__text" required="true" placeholder="Veuillez saisir l'intitulé de votre offre d'emploi"
-                               ng-model="jobOffer.titre" />
-                        <span class="form__text_highlight"></span>
-                        <span class="form__text_bar"></span>
-                        <label class="form__text_label">Intitulé</label>
-                        <label class="form__text_required"
-                               ng-show="isValueEmpty(user.titre)">Intitulé obligatoire</label>
-                        <label ng-cloak class="form__text_valid" ng-show="saisieOffreForm.titre.$valid">&#x2713;</label>
-                    </div>
-                </div>
-
-                <div class="form__row">
-                    <div class="column_quarter"></div>
                     <div class="column_half form__input_group">
                         <auto-complete-places name="localisations" required="true" class="form__map"
                                        ng-model="jobOffer.localisations"></auto-complete-places>
