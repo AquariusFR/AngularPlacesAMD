@@ -14,7 +14,7 @@ for (file in window.__karma__.files) {
 
 requirejs.config({
     // Karma serves files from '/base'
-    baseUrl: '/base/app/assets/javascripts/',
+    baseUrl: '/base/assets/javascripts/',
     paths: {
         'async' :               '/base/public/javascripts/libs/requirejs/async',
         'lodash' :              '/base/public/javascripts/libs/lodash',
@@ -29,8 +29,8 @@ requirejs.config({
         'angular-mocks':        '/base/public/javascripts/libs/angular/angular-mocks',
         'moment':               '/base/public/javascripts/libs/moment',
         'Modernizr':            '/base/public/javascripts/libs/modernizr',
-        'templates':            '/base/app/assets/templates',
-        'templatesDirectives':  '/base/app/assets/templates/directives',
+        'templates':            '/base/assets/templates',
+        'templatesDirectives':  '/base/assets/templates/directives',
         'modules/placesApi':    '/base/test/js/modules/mockedPlacesApi',
         'Squire' :              '/base/test/js/lib/Squire'
     },

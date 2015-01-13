@@ -19,8 +19,8 @@ module.exports = function (config) {
             {pattern: 'public/javascripts/libs/*.js', included: false},
             {pattern: 'test/js/lib/Squire.js', included: false},
             {pattern: 'test/js/lib/sinon-1.10.3.js', included: false},
-            {pattern: 'app/assets/javascripts/**/*.js', included: false},
-            {pattern: 'app/assets/templates/*.html', included: false},
+            {pattern: 'assets/javascripts/**/*.js', included: false},
+            {pattern: 'assets/templates/*.html', included: false},
             {pattern: 'test/js/pages/*.js', included: false},
             {pattern: 'test/js/modules/*.js', included: false},
             'test/js/mainTest.js'
