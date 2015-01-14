@@ -15,12 +15,13 @@ module.exports = function (config) {
         },
 
         files: [
+            {pattern: 'assets/javascripts/**/*.js', included: false},
             {pattern: 'test/js/libs/**/*.js', included: false},
             {pattern: 'test/js/libs/*.js', included: false},
-            {pattern: 'assets/javascripts/**/*.js', included: false},
-            {pattern: 'test/templates/*.html', included: false},
+            {pattern: 'test/js/controllers/*.js', included: false},
             {pattern: 'test/js/pages/*.js', included: false},
             {pattern: 'test/js/modules/*.js', included: false},
+            {pattern: 'test/templates/*.html', included: false},
             'test/js/mainTest.js'
         ],
 

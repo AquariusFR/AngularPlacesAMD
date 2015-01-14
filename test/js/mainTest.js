@@ -14,24 +14,23 @@ for (file in window.__karma__.files) {
 
 requirejs.config({
     // Karma serves files from '/base'
-    baseUrl: '/base/assets/javascripts/',
+    baseUrl: '/base/test/js',
     paths: {
-        'async' :               '/base/test/js/libs/requirejs/async',
-        'lodash' :              '/base/test/js/libs/lodash',
-        'Taggle' :              '/base/test/js/libs/taggle',
-        'requirejs':            '/base/test/js/libs/require-2.1.15',
-        'jquery':               '/base/test/js/libs/jquery',
-        'text':                 '/base/test/js/libs/text',
-        'angular':              '/base/test/js/libs/angular/angular',
-        'angular-animate':      '/base/test/js/libs/angular/angular-animate',
-        'angular-route':        '/base/test/js/libs/angular/angular-route',
-        'angular-sanitize':     '/base/test/js/libs/angular/angular-sanitize',
-        'angular-mocks':        '/base/test/js/libs/angular/angular-mocks',
-        'moment':               '/base/test/js/libs/moment',
-        'Modernizr':            '/base/test/js/libs/modernizr',
+        'async' :               'libs/requirejs/async',
+        'requirejs':            'libs/require-2.1.15',
+        'lodash' :              'libs/lodash',
+        'Taggle' :              'libs/taggle',
+        'text':                 'libs/text',
+        'angular':              'libs/angular/angular',
+        'angular-animate':      'libs/angular/angular-animate',
+        'angular-route':        'libs/angular/angular-route',
+        'angular-sanitize':     'libs/angular/angular-sanitize',
+        'angular-mocks':        'libs/angular/angular-mocks',
+        'Squire' :              'libs/Squire',
+        'modules/placesApi':    'modules/mockedPlacesApi',
         'templates':            '/base/test/templates',
-        'modules/placesApi':    '/base/test/js/modules/mockedPlacesApi',
-        'Squire' :              '/base/test/js/libs/Squire'
+        'directives' :          '/base/assets/javascripts/directives',
+        'modules' :             '/base/assets/javascripts/modules'
     },
     shim: {
         'angular': {
