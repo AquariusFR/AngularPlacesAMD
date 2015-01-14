@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl : "/assets/javascripts",
+    baseUrl : "../assets/javascripts/",
     shim: {
         'angular': {
             exports: 'angular'
@@ -25,20 +25,20 @@ requirejs.config({
     },
 
     paths: {
-        'text':                 'libs/text',
-        'async':                'libs/requirejs/async',
-        'goog':                 'libs/requirejs/goog',
-        'propertyParser':       'libs/requirejs/propertyParser',
-        'jquery':               'libs/jquery',
-        'angular':              'libs/angular/angular',
-        'angular-animate':      'libs/angular/angular-animate',
-        'angular-route':        'libs/angular/angular-route',
-        'angular-sanitize':     'libs/angular/angular-sanitize',
-        'angular-google-maps':  'libs/angular-google-maps',
-        'lodash':               'libs/lodash',
+        'text':                 '../../demo/javascripts/libs//text',
+        'async':                '../../demo/javascripts/libs//requirejs/async',
+        'goog':                 '../../demo/javascripts/libs//requirejs/goog',
+        'propertyParser':       '../../demo/javascripts/libs//requirejs/propertyParser',
+        'jquery':               '../../demo/javascripts/libs//jquery',
+        'angular':              '../../demo/javascripts/libs//angular/angular',
+        'angular-animate':      '../../demo/javascripts/libs//angular/angular-animate',
+        'angular-route':        '../../demo/javascripts/libs//angular/angular-route',
+        'angular-sanitize':     '../../demo/javascripts/libs//angular/angular-sanitize',
+        'angular-google-maps':  '../../demo/javascripts/libs//angular-google-maps',
+        'lodash':               '../../demo/javascripts/libs//lodash',
         'moment':               'libs/moment',
-        'Modernizr':            'libs/modernizr',
-        'Taggle':               'libs/taggle',
+        'Modernizr':            '../../demo/javascripts/libs//modernizr',
+        'Taggle':               '../../demo/javascripts/libs//taggle',
         'templates':            '/assets/templates/'
     }
 });

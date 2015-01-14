@@ -68,8 +68,8 @@ define(['lodash',
                     position: location,
                     map: api.map,
                     animation: google.maps.Animation.DROP,
-                    title: title,
-                    icon: '/assets/img/icon/' + color + '.png'
+                    title: title/*,
+                    icon: '/assets/img/icon/' + color + '.png'*/
                 });
             },
             // positionne le marker correspondant à la localisation sur la map
