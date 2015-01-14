@@ -1,2 +1,6 @@
 # AngularPlaces
-An angular directive that captures a location via an input GooglePlaces. It allows multiple input location and manage this list with a tag system.  Uses GooglePlaces library, and Lodash Taggle.
+An angular directive that captures a location via an input GooglePlaces. It allows multiple input location and manage this list with a tag system.  Uses *GooglePlaces*, *Lodash* and *Taggle* library.
+
+This version is packaged as an AMD module, but it can easily be modified into a regular angular module.
+
+Please find a demo file to see how to wrap an angular application into requirejs.
