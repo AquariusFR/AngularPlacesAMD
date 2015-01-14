@@ -94,11 +94,11 @@ define(['modules/placesApi',
             restrict: 'E',
             require: 'ngModel',
             template: '<input type="text" class="form__text" required="true" placeholder="Veuillez saisir la localisation" places/>' +
-            '<span class="form__text_highlight"></span>' +
-            '<span class="form__text_bar"></span>' +
-            '<label class="form__text_label">Localisation</label>' +
-            '<div id="autocompleteTag" class="form__tags"></div>' +
-            '<div id="map-canvas" class="form_map"></div>',
+                '<span class="form__text_highlight"></span>' +
+                '<span class="form__text_bar"></span>' +
+                '<label class="form__text_label">Localisation</label>' +
+                '<div id="autocompleteTag" class="form__tags"></div>' +
+                '<div id="map-canvas" class="form_map"></div>',
             link: function (scope, elem, attrs, ctrl) {
                 directive.buildDirective(scope, elem, ctrl, "locality");
             }

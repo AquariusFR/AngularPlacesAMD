@@ -5,8 +5,8 @@ define(['Taggle'
         var service = {
             build: function (element, onTagAddCallback, onTagRemoveCallback) {
 
-                if(onTagAddCallback === null){
-                    onTagAddCallback = function(){};
+                if (onTagAddCallback === null) {
+                    onTagAddCallback = function () {};
                 }
 
 

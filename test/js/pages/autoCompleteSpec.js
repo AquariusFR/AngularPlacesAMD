@@ -1,4 +1,3 @@
-/*globals describe : false, it:false, expect:false, beforeEach:false, console: false, define: false, inject: false, angular: false, module: false*/
 define(
     [
         'text!templates/demo.html',
