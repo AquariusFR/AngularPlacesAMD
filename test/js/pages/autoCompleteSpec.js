@@ -1,9 +1,9 @@
 /*globals describe : false, it:false, expect:false, beforeEach:false, console: false, define: false, inject: false, angular: false, module: false*/
 define(
     [
-        'text!templates/saisieOffre.html',
+        'text!templates/demo.html',
         'modules/placesApi',
-        'pages/saisieOffre',
+        'pages/demo',
         'angular-mocks'],
     function (template, fakedPlacesApi) {
         "use strict";
@@ -149,7 +149,7 @@ define(
                 return fakedPlacesApi.api.promise;
             };
             // load directive
-            beforeEach(module('saisieOffre'));
+            beforeEach(module('demo'));
 
             beforeEach(inject(function ($rootScope, $compile) {
                 scope = $rootScope.$new();
