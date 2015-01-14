@@ -16,23 +16,22 @@ requirejs.config({
     // Karma serves files from '/base'
     baseUrl: '/base/assets/javascripts/',
     paths: {
-        'async' :               '/base/public/javascripts/libs/requirejs/async',
-        'lodash' :              '/base/public/javascripts/libs/lodash',
-        'Taggle' :              '/base/public/javascripts/libs/taggle',
-        'requirejs':            '/base/public/javascripts/libs/require-2.1.15',
-        'jquery':               '/base/public/javascripts/libs/jquery',
-        'text':                 '/base/public/javascripts/libs/text',
-        'angular':              '/base/public/javascripts/libs/angular/angular',
-        'angular-animate':      '/base/public/javascripts/libs/angular/angular-animate',
-        'angular-route':        '/base/public/javascripts/libs/angular/angular-route',
-        'angular-sanitize':     '/base/public/javascripts/libs/angular/angular-sanitize',
-        'angular-mocks':        '/base/public/javascripts/libs/angular/angular-mocks',
-        'moment':               '/base/public/javascripts/libs/moment',
-        'Modernizr':            '/base/public/javascripts/libs/modernizr',
-        'templates':            '/base/assets/templates',
-        'templatesDirectives':  '/base/assets/templates/directives',
+        'async' :               '/base/test/js/libs/requirejs/async',
+        'lodash' :              '/base/test/js/libs/lodash',
+        'Taggle' :              '/base/test/js/libs/taggle',
+        'requirejs':            '/base/test/js/libs/require-2.1.15',
+        'jquery':               '/base/test/js/libs/jquery',
+        'text':                 '/base/test/js/libs/text',
+        'angular':              '/base/test/js/libs/angular/angular',
+        'angular-animate':      '/base/test/js/libs/angular/angular-animate',
+        'angular-route':        '/base/test/js/libs/angular/angular-route',
+        'angular-sanitize':     '/base/test/js/libs/angular/angular-sanitize',
+        'angular-mocks':        '/base/test/js/libs/angular/angular-mocks',
+        'moment':               '/base/test/js/libs/moment',
+        'Modernizr':            '/base/test/js/libs/modernizr',
+        'templates':            '/base/test/templates',
         'modules/placesApi':    '/base/test/js/modules/mockedPlacesApi',
-        'Squire' :              '/base/test/js/lib/Squire'
+        'Squire' :              '/base/test/js/libs/Squire'
     },
     shim: {
         'angular': {

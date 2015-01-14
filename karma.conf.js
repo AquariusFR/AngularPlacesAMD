@@ -15,12 +15,10 @@ module.exports = function (config) {
         },
 
         files: [
-            {pattern: 'public/javascripts/libs/**/*.js', included: false},
-            {pattern: 'public/javascripts/libs/*.js', included: false},
-            {pattern: 'test/js/lib/Squire.js', included: false},
-            {pattern: 'test/js/lib/sinon-1.10.3.js', included: false},
+            {pattern: 'test/js/libs/**/*.js', included: false},
+            {pattern: 'test/js/libs/*.js', included: false},
             {pattern: 'assets/javascripts/**/*.js', included: false},
-            {pattern: 'assets/templates/*.html', included: false},
+            {pattern: 'test/templates/*.html', included: false},
             {pattern: 'test/js/pages/*.js', included: false},
             {pattern: 'test/js/modules/*.js', included: false},
             'test/js/mainTest.js'

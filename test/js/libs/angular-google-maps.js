@@ -413,7 +413,7 @@ Nicholas McCready - https://twitter.com/nmccready
       /*
       utility to reduce code bloat. The whole point is to check if there is existing synchronous work going on.
       If so we wait on it.
-      
+
       Note: This is fully intended to be mutable (ie existingPiecesObj is getting existingPieces prop slapped on)
        */
       waitOrGo = function(existingPiecesObj, fnPromise) {
@@ -430,10 +430,10 @@ Nicholas McCready - https://twitter.com/nmccready
         Author: Nicholas McCready & jfriend00
         _async handles things asynchronous-like :), to allow the UI to be free'd to do other things
         Code taken from http://stackoverflow.com/questions/10344498/best-way-to-iterate-over-an-array-without-blocking-the-ui
-      
+
         The design of any functionality of _async is to be like lodash/underscore and replicate it but call things
         asynchronously underneath. Each should be sufficient for most things to be derived from.
-      
+
         Optional Asynchronous Chunking via promises.
        */
       doChunk = function(array, chunkSizeOrDontChunk, pauseMilli, chunkCb, pauseCb, overallD, index) {
@@ -5191,7 +5191,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
           being that we cannot tell the difference in Key String vs. a normal value string (TemplateUrl)
           we will assume that all scope values are string expressions either pointing to a key (propName) or using
           'self' to point the model as container/object of interest.
-          
+
           This may force redundant information into the model, but this appears to be the most flexible approach.
            */
           this.isIconVisibleOnClick = true;
@@ -7467,7 +7467,7 @@ InfoBox.prototype.createInfoBoxDiv_ = function () {
 
         this.eventListeners_.push(google.maps.event.addDomListener(this.div_, events[i], cancelHandler));
       }
-      
+
       // Workaround for Google bug that causes the cursor to change to a pointer
       // when the mouse moves over a marker underneath InfoBox.
       this.eventListeners_.push(google.maps.event.addDomListener(this.div_, "mouseover", function (e) {
@@ -7728,7 +7728,7 @@ InfoBox.prototype.draw = function () {
   var pixPosition = this.getProjection().fromLatLngToDivPixel(this.position_);
 
   this.div_.style.left = (pixPosition.x + this.pixelOffset_.width) + "px";
-  
+
   if (this.alignBottom_) {
     this.div_.style.bottom = -(pixPosition.y + this.pixelOffset_.height) + "px";
   } else {
@@ -8037,7 +8037,7 @@ InfoBox.prototype.close = function () {
   }
 
   if (this.eventListeners_) {
-    
+
     for (i = 0; i < this.eventListeners_.length; i++) {
 
       google.maps.event.removeListener(this.eventListeners_[i]);
@@ -8474,7 +8474,7 @@ InfoBox.prototype.close = function () {
     var control;
     var image;
     var me = this;
-    
+
     control = document.createElement("div");
     control.className = this.visualClass_;
     control.style.position = "relative";
@@ -10124,7 +10124,7 @@ MarkerClusterer.prototype.addMarkers = function (markers, opt_nodraw) {
     if (markers.hasOwnProperty(key)) {
       this.pushMarkerTo_(markers[key]);
     }
-  }  
+  }
   if (!opt_nodraw) {
     this.redraw_();
   }
